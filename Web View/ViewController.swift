@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let webViewURL = URL(string: "https://www.apple.com")
+        let webViewReq = URLRequest(url: webViewURL!)
+        webView.loadRequest(webViewReq)
     }
 
 
